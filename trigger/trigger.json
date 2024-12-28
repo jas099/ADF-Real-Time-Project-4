@@ -1,0 +1,31 @@
+{
+	"name": "trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Only_selected_file",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"file_system": "destination",
+					"directory_name": "csvfiles",
+					"sink_file_system": "reporting",
+					"sink_directory_name": "csvfiles"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 15,
+				"startTime": "2024-12-26T17:10:00",
+				"endTime": "2024-12-27T17:15:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
